@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription MAK Academia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-red-700 text-white py-6 text-center shadow-md">
+    <h1 class="text-4xl font-bold">Inscription - MAK Academia</h1>
+    <p class="text-lg mt-2">Rejoins l’élite du basketball africain</p>
+  </header>
+
+  <!-- Formulaire -->
+  <main class="max-w-4xl mx-auto mt-10 bg-white p-8 rounded-xl shadow-lg">
+    <form action="submit_inscription.php" method="POST" enctype="multipart/form-data" class="space-y-6">
+
+      <!-- Informations personnelles -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block mb-2 font-semibold">Nom</label>
+          <input type="text" name="nom" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Prénom</label>
+          <input type="text" name="prenom" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <label class="block mb-2 font-semibold">Date de naissance</label>
+          <input type="date" name="date_naissance" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Taille (en cm)</label>
+          <input type="number" name="taille" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Poids (en kg)</label>
+          <input type="number" name="poids" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+        </div>
+      </div>
+
+      <div>
+        <label class="block mb-2 font-semibold">Poste préféré</label>
+        <select name="poste" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          <option value="">-- Choisir un poste --</option>
+          <option>Point Guard (Meneur)</option>
+          <option>Shooting Guard (Arrière)</option>
+          <option>Small Forward (Ailier)</option>
+          <option>Power Forward (Ailier fort)</option>
+          <option>Center (Pivot)</option>
+        </select>
+      </div>
+
+      <!-- Contact -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block mb-2 font-semibold">Adresse email</label>
+          <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Téléphone</label>
+          <input type="tel" name="telephone" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+        </div>
+      </div>
+
+      <!-- Upload photo -->
+      <div>
+        <label class="block mb-2 font-semibold">Photo du joueur</label>
+        <input type="file" name="photo" accept="image/*" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
+      </div>
+
+      <!-- Motivations -->
+      <div>
+        <label class="block mb-2 font-semibold">Quels sont tes objectifs en rejoignant MAK Academia ?</label>
+        <textarea name="motivation" rows="4" required class="w-full border border-gray-300 rounded-lg px-4 py-2 resize-none"></textarea>
+      </div>
+
+      <!-- Bouton -->
+      <div class="text-center">
+        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition">
+          S'inscrire maintenant
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 py-6 text-center text-sm text-gray-600">
+    © 2025 MAK Academia - Tous droits réservés.
+  </footer>
+
+</body>
+</html>
