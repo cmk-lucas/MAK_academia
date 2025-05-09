@@ -53,87 +53,84 @@
     </script>
 
 
-    <!-- Hero Section with Video Background -->
-    <section class="relative h-[90vh] bg-black overflow-hidden">
-        <!-- Background Video -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-          <source src="img/nba.mp4" type="video/mp4">
-          Votre navigateur ne supporte pas la lecture de vidéos HTML5.
-        </video>
-      
-        <!-- Overlay dégradé sombre -->
-        <div class="absolute inset-0 bg-gradient-to-br from-black via-black/70 to-red-800/60 backdrop-blur-sm animate-fadeInSlow"></div>
-      
-        <!-- Contenu principal -->
-        <div class="relative z-10 flex items-center justify-center h-full px-6 text-center">
-          <div class="max-w-3xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-red-600 via-red-400 to-red-700 bg-clip-text text-transparent drop-shadow-2xl animate-slideUp">
-              Rejoins la MAK Academia
-            </h1>
-            <p class="text-lg md:text-2xl text-gray-200 mb-8 leading-relaxed animate-fadeInText">
-              Transforme ta passion en puissance. Deviens le joueur que tu as toujours rêvé d’être avec un encadrement digne des plus grands.
-            </p>
-            <a href="#prestations"
-              class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-full text-lg font-semibold transition duration-300 shadow-lg hover:shadow-red-700/50 focus:outline-none focus:ring-4 focus:ring-red-400/40 animate-fadeInText delay-300">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-              Découvrir nos prestations
-            </a>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Animations améliorées -->
-      <style>
-        @keyframes fadeInSlow {
-          0% {
-            opacity: 0;
-            transform: scale(1.05);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-      
-        @keyframes slideUp {
-          0% {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      
-        @keyframes fadeInText {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-      
-        .animate-fadeInSlow {
-          animation: fadeInSlow 1.8s ease-out forwards;
-        }
-      
-        .animate-slideUp {
-          animation: slideUp 1s ease-out forwards;
-        }
-      
-        .animate-fadeInText {
-          animation: fadeInText 2s ease-out forwards;
-        }
-      
-        .delay-300 {
-          animation-delay: 0.3s;
-        }
-      </style>
-      
+    <!-- Hero Section with Background Image -->
+<section class="relative h-[90vh] bg-black overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('img/mac6.jpg');"></div>
+  
+    <!-- Overlay dégradé sombre -->
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-black/70 to-red-800/60 backdrop-blur-sm animate-fadeInSlow"></div>
+  
+    <!-- Contenu principal -->
+    <div class="relative z-10 flex items-center justify-center h-full px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-red-600 via-red-400 to-red-700 bg-clip-text text-transparent drop-shadow-2xl animate-slideUp">
+          Rejoins la MAK Academia
+        </h1>
+        <p class="text-lg md:text-2xl text-gray-200 mb-8 leading-relaxed animate-fadeInText">
+          Transforme ta passion en puissance. Deviens le joueur que tu as toujours rêvé d’être avec un encadrement digne des plus grands.
+        </p>
+        <a href="#prestations"
+          class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-7 py-3 rounded-full text-lg font-semibold transition duration-300 shadow-lg hover:shadow-red-700/50 focus:outline-none focus:ring-4 focus:ring-red-400/40 animate-fadeInText delay-300">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+          Découvrir nos prestations
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Animations CSS -->
+  <style>
+    @keyframes fadeInSlow {
+      0% {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    .animate-fadeInSlow {
+      animation: fadeInSlow 1.8s ease-out forwards;
+    }
+  
+    .animate-slideUp {
+      animation: slideUp 1s ease-out forwards;
+    }
+  
+    .animate-fadeInText {
+      animation: fadeInText 2s ease-out forwards;
+    }
+  
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+  </style>
+  
 
     <!-- Prestations -->
     <section id="prestations" class="py-20 bg-gradient-to-br from-black via-gray-900 to-black text-white">
