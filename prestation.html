@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos Prestations – MAK Academia</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({ duration: 1000 });
+        });
+    </script>
+</head>
+
+<body class="bg-gray-950 text-white">
+
+<!-- Navbar -->
+<header class="bg-black border-b border-red-600 py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="text-red-600 text-2xl font-bold">MAK Academia</a>
+
+        <!-- Menu Toggle Button for Mobile -->
+        <button id="menu-toggle" class="md:hidden text-white">
+            <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <nav id="desktop-menu" class="space-x-6 text-gray-300 hidden md:flex">
+            <a href="index.html" class="hover:text-red-500">Accueil</a>
+            <a href="#prestations" class="hover:text-red-500">Prestations</a>
+            <a href="contact.html" class="hover:text-red-500">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="md:hidden bg-black text-white space-y-4 px-6 py-4 hidden absolute top-0 left-0 w-full h-screen bg-opacity-90 transform translate-x-full transition-transform duration-300">
+        <a href="index.html" class="hover:text-red-500">Accueil</a>
+        <a href="#prestations" class="hover:text-red-500">Prestations</a>
+        <a href="contact.html" class="hover:text-red-500">Contact</a>
+    </nav>
+</header>
+
+<script>
+  // Toggle menu visibility on mobile
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  
+  menuToggle.addEventListener('click', () => {
+    // Toggle the visibility of the mobile menu with the slide-in effect
+    mobileMenu.classList.toggle('translate-x-full');  // Slide-in/out effect
+    
+    // Animate hamburger icon to 'X' on toggle
+    hamburgerIcon.classList.toggle('rotate-45');  // Add rotation for the "X"
+    
+    // Toggle the 'hidden' class for mobile menu (show/hide)
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<style>
+  /* Initial state of the mobile menu (off-screen) */
+  #mobile-menu {
+    transform: translateX(100%); /* Initially off-screen */
+  }
+
+  /* Hamburger icon rotate for toggle effect */
+  #hamburger-icon.rotate-45 {
+    transform: rotate(45deg);  /* Rotate to form an 'X' when clicked */
+  }
+
+  /* Transition for sliding the menu */
+  #mobile-menu.transition-transform {
+    transition: transform 0.3s ease; /* Smooth slide-in/out effect */
+  }
+</style>
+
+
+<!-- Titre -->
+<section class="py-20 text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400">
+        Nos Prestations
+    </h1>
+    <p class="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">Découvrez les services que nous offrons pour transformer votre potentiel en excellence sportive et académique.</p>
+</section>
+
+<!-- Prestations -->
+<section id="prestations" class="py-16 px-6 container mx-auto">
+    <div class="grid md:grid-cols-3 gap-10">
+        <!-- Coaching Sportif -->
+        <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-xl border border-red-600 hover:scale-105 transition-transform duration-300 transform hover:bg-gradient-to-r hover:from-red-600 hover:to-red-400">
+            <h3 class="text-2xl font-bold mb-2 text-red-500">Coaching Sportif</h3>
+            <p class="text-gray-400 mb-4">Programmes personnalisés pour jeunes athlètes, encadrés par des experts certifiés.</p>
+            <ul class="list-disc list-inside text-gray-500 text-sm">
+                <li>Entraînements physiques intensifs</li>
+                <li>Suivi nutritionnel</li>
+                <li>Évaluations de performance</li>
+            </ul>
+        </div>
+
+        <!-- Formation Académique -->
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-900 p-6 rounded-xl shadow-xl border border-red-600 hover:scale-105 transition-transform duration-300 transform hover:bg-gradient-to-r hover:from-red-600 hover:to-red-400">
+            <h3 class="text-2xl font-bold mb-2 text-red-500">Formation Académique</h3>
+            <p class="text-gray-400 mb-4">Un accompagnement pédagogique rigoureux pour exceller à l'école et au sport.</p>
+            <ul class="list-disc list-inside text-gray-500 text-sm">
+                <li>Cours particuliers</li>
+                <li>Soutien scolaire</li>
+                <li>Préparation aux examens</li>
+            </ul>
+        </div>
+
+        <!-- Mentorat & Orientation -->
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-900 p-6 rounded-xl shadow-xl border border-red-600 hover:scale-105 transition-transform duration-300 transform hover:bg-gradient-to-r hover:from-red-600 hover:to-red-400">
+            <h3 class="text-2xl font-bold mb-2 text-red-500">Mentorat & Orientation</h3>
+            <p class="text-gray-400 mb-4">Coaching de vie, choix de carrière, orientation pour réussir au-delà du terrain.</p>
+            <ul class="list-disc list-inside text-gray-500 text-sm">
+                <li>Conseils d’orientation</li>
+                <li>Coaching motivationnel</li>
+                <li>Suivi personnalisé</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Témoignages -->
+<section class="py-16 bg-gray-900 text-center">
+    <h2 class="text-3xl font-bold text-red-500 mb-10">Témoignages</h2>
+    <div class="grid md:grid-cols-3 gap-6 px-6">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+            <p class="italic text-gray-300">"Grâce au programme de MAK Academia, j’ai gagné en discipline et en confiance."</p>
+            <p class="mt-4 font-bold text-red-400">– Junior, 17 ans</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+            <p class="italic text-gray-300">"L'accompagnement scolaire m’a permis d’avoir mon diplôme avec mention."</p>
+            <p class="mt-4 font-bold text-red-400">– Grâce, 18 ans</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+            <p class="italic text-gray-300">"Le coaching m’a redonné espoir après une blessure. Merci MAK Academia !"</p>
+            <p class="mt-4 font-bold text-red-400">– Kevin, 20 ans</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-red-500 mb-10">FAQ – Questions fréquentes</h2>
+    <div class="space-y-4">
+        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors duration-200">
+            <summary class="font-semibold text-white">Quels âges sont acceptés pour le programme sportif ?</summary>
+            <p class="mt-2 text-gray-400">Les jeunes de 12 à 20 ans peuvent intégrer nos programmes personnalisés.</p>
+        </details>
+        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors duration-200">
+            <summary class="font-semibold text-white">Est-ce que l’on peut suivre les formations à distance ?</summary>
+            <p class="mt-2 text-gray-400">Oui, certains cours sont disponibles en ligne selon les besoins.</p>
+        </details>
+        <details class="bg-gray-800 p-4 rounded-lg cursor-pointer hover:bg-gray-700 transition-colors duration-200">
+            <summary class="font-semibold text-white">Quel est le tarif pour un suivi complet ?</summary>
+            <p class="mt-2 text-gray-400">Nos tarifs sont flexibles. Contacte-nous pour une évaluation gratuite !</p>
+        </details>
+    </div>
+</section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-red-600 to-red-400 text-center text-black">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Prêt à transformer ton avenir ?</h2>
+        <p class="mb-6">Contacte-nous dès aujourd’hui pour commencer ton parcours d’excellence avec MAK Academia.</p>
+        <a href="contact.html" class="inline-block bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">Nous contacter</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-red-600">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2025 MAK Academia. Tous droits réservés.</p>
+            <p class="text-gray-500 mt-2">Kinshasa, RDC - <a href="mailto:contact@makacademia.cd" class="text-red-600 hover:underline">contact@makacademia.cd</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
