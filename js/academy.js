@@ -1,13 +1,10 @@
-// Effet fade+slide au scroll avec Intersection Observer
-  document.addEventListener('DOMContentLoaded', () => {
-    const options = {
-      threshold: 0.3
-    };
-    const observer = new IntersectionObserver((entries) => {
+document.addEventListener('DOMContentLoaded', () => {
+    const options = { threshold: 0.3 };
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-6');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
           observer.unobserve(entry.target);
         }
       });
