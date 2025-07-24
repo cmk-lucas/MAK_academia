@@ -15,21 +15,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  const slider = document.getElementById('slider');
-  let position = 0;
-  const speed = 0.5; // vitesse en px par frame
-  
-  // largeur totale de la moitié des logos (une seule série)
-  const singleWidth = slider.scrollWidth / 2;
+  window.addEventListener('load', () => {
+    const slider = document.getElementById('slider');
+    let position = 0;
+    let speed = 0.5;
 
-  function step() {
-    position -= speed;
-    if (Math.abs(position) >= singleWidth) {
-      position = 0; // reset pour boucle infinie
+    // Attendre que les images soient chargées
+    function waitForImages(callback) {
+      const images = slider.querySelectorAll('img');
+      let loaded = 0;
+      images.forEach((img) => {
+        if (img.complete) {
+          loaded++;
+        } else {
+          img.onload = () => {
+            loaded++;
+            if (loaded === images.length) callback();
+          };
+        }
+      });
+      if (loaded === images.length) callback();
     }
-    slider.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(step);
-  }
 
-  step();
+    waitForImages(() => {
+      const width = slider.scrollWidth / 2;
 
+      function animate() {
+        position -= speed;
+        if (Math.abs(position) >= width) {
+          position = 0;
+        }
+        slider.style.transform = `translateX(${position}px)`;
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    });
+  });
