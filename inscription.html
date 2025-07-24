@@ -38,23 +38,59 @@
 </header>
 
 
-  <!-- Formulaire d'inscription -->
-<section class="py-12 px-6 bg-gray-100">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Formulaire d'inscription</h2>
-    <form id="inscriptionForm" onsubmit="sendToWhatsApp(event)" class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl shadow-lg">
-      <input type="text" id="nom" placeholder="Nom complet" class="border p-3 rounded-md" required>
-      <input type="email" id="email" placeholder="Adresse email" class="border p-3 rounded-md" required>
-      <input type="tel" id="telephone" placeholder="Numéro de téléphone" class="border p-3 rounded-md" required>
-      <input type="date" id="dateNaissance" class="border p-3 rounded-md" required>
-      <input type="text" id="adresse" placeholder="Adresse" class="border p-3 rounded-md col-span-2">
-      <textarea id="message" placeholder="Message ou info complémentaire" class="border p-3 rounded-md col-span-2"></textarea>
-      <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-md col-span-2">
-        Envoyer la demande d’inscription
-      </button>
+  <!-- Formulaire d'inscription amélioré -->
+<section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center text-blue-800">Formulaire d'inscription</h2>
+    
+    <form id="inscriptionForm" onsubmit="sendToWhatsApp(event)" class="bg-white p-6 sm:p-8 rounded-xl shadow-xl space-y-6">
+      
+      <!-- Nom complet -->
+      <div>
+        <label for="nom" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Ex: Lucas Mbala" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Adresse email</label>
+        <input type="email" id="email" name="email" placeholder="Ex: lucas@email.com" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      </div>
+
+      <!-- Téléphone -->
+      <div>
+        <label for="telephone" class="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Ex: +243 970 000 000" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      </div>
+
+      <!-- Date de naissance -->
+      <div>
+        <label for="dateNaissance" class="block text-sm font-medium text-gray-700 mb-1">Date de naissance</label>
+        <input type="date" id="dateNaissance" name="dateNaissance" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      </div>
+
+      <!-- Adresse -->
+      <div>
+        <label for="adresse" class="block text-sm font-medium text-gray-700 mb-1">Adresse</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Ex: 12 avenue Lumumba, Kinshasa" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message ou info complémentaire</label>
+        <textarea id="message" name="message" rows="4" placeholder="Ex: Je suis intéressé par le niveau intermédiaire..." class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <!-- Bouton -->
+      <div class="text-center pt-4">
+        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-md w-full sm:w-auto">
+          Envoyer la demande d’inscription
+        </button>
+      </div>
     </form>
   </div>
 </section>
+
 
 
   <!-- Documents à fournir -->
