@@ -2,99 +2,252 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inscription MAK Academia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inscriptions - Académie Basket</title>
   <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-white text-black font-sans">
 
-  <!-- Header -->
-  <header class="bg-red-700 text-white py-6 text-center shadow-md">
-    <h1 class="text-4xl font-bold">Inscription - MAK Academia</h1>
-    <p class="text-lg mt-2">Rejoins l’élite du basketball africain</p>
-  </header>
+<!-- Header avec menu responsive -->
+<header class="bg-red-900 text-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold uppercase text-white">Mac Académie</h1>
 
-  <!-- Formulaire -->
-  <main class="max-w-4xl mx-auto mt-10 bg-white p-8 rounded-xl shadow-lg">
-    <form action="submit_inscription.php" method="POST" enctype="multipart/form-data" class="space-y-6">
+    <!-- Toggle button (mobile) -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
 
-      <!-- Informations personnelles -->
-      <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <label class="block mb-2 font-semibold">Nom</label>
-          <input type="text" name="nom" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
-        </div>
-        <div>
-          <label class="block mb-2 font-semibold">Prénom</label>
-          <input type="text" name="prenom" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
-        </div>
-      </div>
+    <!-- Menu navigation -->
+    <nav id="nav-menu" class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:underline">Accueil</a>
+      <a href="academy.html" class=" text-white font-semibold">visiter</a>
+    </nav>
+  </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div>
-          <label class="block mb-2 font-semibold">Date de naissance</label>
-          <input type="date" name="date_naissance" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
-        </div>
-        <div>
-          <label class="block mb-2 font-semibold">Taille (en cm)</label>
-          <input type="number" name="taille" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
-        </div>
-        <div>
-          <label class="block mb-2 font-semibold">Poids (en kg)</label>
-          <input type="number" name="poids" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
-        </div>
-      </div>
+  <!-- Menu mobile (affiché quand toggle actif) -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <a href="index.html" class="block py-2 hover:underline">Accueil</a>
+    <a href="academy.html" class="block py-2  text-white font-semibold">Visiter</a>
+  </div>
+</header>
 
-      <div>
-        <label class="block mb-2 font-semibold">Poste préféré</label>
-        <select name="poste" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
-          <option value="">-- Choisir un poste --</option>
-          <option>Point Guard (Meneur)</option>
-          <option>Shooting Guard (Arrière)</option>
-          <option>Small Forward (Ailier)</option>
-          <option>Power Forward (Ailier fort)</option>
-          <option>Center (Pivot)</option>
-        </select>
-      </div>
 
-      <!-- Contact -->
-      <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <label class="block mb-2 font-semibold">Adresse email</label>
-          <input type="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
-        </div>
-        <div>
-          <label class="block mb-2 font-semibold">Téléphone</label>
-          <input type="tel" name="telephone" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
-        </div>
-      </div>
-
-      <!-- Upload photo -->
-      <div>
-        <label class="block mb-2 font-semibold">Photo du joueur</label>
-        <input type="file" name="photo" accept="image/*" required class="w-full border border-gray-300 rounded-lg px-4 py-2" />
-      </div>
-
-      <!-- Motivations -->
-      <div>
-        <label class="block mb-2 font-semibold">Quels sont tes objectifs en rejoignant MAK Academia ?</label>
-        <textarea name="motivation" rows="4" required class="w-full border border-gray-300 rounded-lg px-4 py-2 resize-none"></textarea>
-      </div>
-
-      <!-- Bouton -->
-      <div class="text-center">
-        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition">
-          S'inscrire maintenant
-        </button>
-      </div>
-
+  <!-- Formulaire d'inscription -->
+<section class="py-12 px-6 bg-gray-100">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Formulaire d'inscription</h2>
+    <form id="inscriptionForm" onsubmit="sendToWhatsApp(event)" class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-xl shadow-lg">
+      <input type="text" id="nom" placeholder="Nom complet" class="border p-3 rounded-md" required>
+      <input type="email" id="email" placeholder="Adresse email" class="border p-3 rounded-md" required>
+      <input type="tel" id="telephone" placeholder="Numéro de téléphone" class="border p-3 rounded-md" required>
+      <input type="date" id="dateNaissance" class="border p-3 rounded-md" required>
+      <input type="text" id="adresse" placeholder="Adresse" class="border p-3 rounded-md col-span-2">
+      <textarea id="message" placeholder="Message ou info complémentaire" class="border p-3 rounded-md col-span-2"></textarea>
+      <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-md col-span-2">
+        Envoyer la demande d’inscription
+      </button>
     </form>
-  </main>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="mt-10 py-6 text-center text-sm text-gray-600">
-    © 2025 MAK Academia - Tous droits réservés.
-  </footer>
 
+  <!-- Documents à fournir -->
+<section class="py-12 px-6 bg-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-blue-800">📄 Documents à fournir</h2>
+    <p class="mb-4 text-gray-700">
+      Pour valider votre inscription à l’Académie de Basket, veuillez rassembler les documents suivants :
+    </p>
+    <ul class="list-disc pl-6 space-y-3 text-gray-800 text-[17px] leading-relaxed">
+      <li>✅ Certificat médical de non contre-indication à la pratique du basketball (moins de 3 mois)</li>
+      <li>📸 2 photos d'identité récentes (format passeport)</li>
+      <li>🆔 Photocopie de la carte d'identité ou du passeport</li>
+      <li>👨‍👩‍👧 Autorisation parentale signée (obligatoire pour les moins de 18 ans)</li>
+      <li>📄 Relevé de notes ou bulletin scolaire (dernière année)</li>
+      <li>🏀 Lettre de motivation (manuscrite ou tapée) expliquant pourquoi vous souhaitez rejoindre l’académie</li>
+      <li>📝 CV sportif (facultatif mais recommandé pour les plus de 16 ans)</li>
+      <li>💉 Carnet de vaccination ou certificat de vaccination COVID-19 (si requis par le centre)</li>
+      <li>🧾 Justificatif de domicile (moins de 3 mois)</li>
+    </ul>
+    <p class="mt-6 text-sm text-gray-600">
+      📌 Tous les documents doivent être scannés ou en version claire et lisible. Les originaux seront demandés le jour de la rentrée.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Tarifs -->
+<section class="py-16 px-6 bg-gradient-to-b from-blue-100 to-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-900 mb-6 drop-shadow-md">💰 Tarifs & Frais d'inscription</h2>
+    <p class="text-lg sm:text-xl text-gray-700 mb-4">Un tarif unique, clair et tout inclus pour rejoindre l'élite du basket !</p>
+    
+    <div class="bg-white rounded-3xl shadow-2xl p-10 inline-block border-4 border-red-500">
+      <p class="text-5xl font-extrabold text-red-600 mb-2">$100</p>
+      <p class="text-gray-600 text-base">Frais uniques d'inscription – Saison 2025</p>
+      <ul class="mt-6 text-left list-disc list-inside text-gray-700 space-y-2 text-sm sm:text-base">
+        <li>Accès aux entraînements & installations</li>
+        <li>Encadrement professionnel</li>
+        <li>Équipement d'entraînement (maillot officiel)</li>
+        <li>Assurance sportive incluse</li>
+        <li>Participation aux matchs et tournois</li>
+        <li>Suivi médical & préparation physique</li>
+        <li>Badge et carte membre officielle</li>
+      </ul>
+    </div>
+
+    <p class="text-sm text-gray-500 mt-6 italic">⚠️ Aucun frais caché. Tout est compris dans cette formule.</p>
+  </div>
+</section>
+
+
+<!-- Modalités de paiement -->
+<section class="py-12 px-6 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-extrabold mb-6 text-blue-800 text-center">💳 Modalités de Paiement</h2>
+    <p class="text-gray-700 mb-6 text-center text-lg">
+      Nous proposons plusieurs options flexibles pour régler les frais d’inscription et d’adhésion.
+    </p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="bg-gray-50 border rounded-lg p-4 shadow-sm">
+        <h3 class="text-xl font-semibold text-red-600 mb-2">Paiement Mobile</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>M-Pesa</li>
+          <li>Airtel Money</li>
+          <li>Orange Money</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 border rounded-lg p-4 shadow-sm">
+        <h3 class="text-xl font-semibold text-red-600 mb-2">Paiement en Ligne</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Carte bancaire (Visa, Mastercard)</li>
+          <li>PayPal</li>
+          <li>Stripe</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 border rounded-lg p-4 shadow-sm">
+        <h3 class="text-xl font-semibold text-red-600 mb-2">Paiement sur Place</h3>
+        <p class="text-gray-700">
+          Il est possible de régler en espèces directement au siège de l’académie. Un reçu officiel vous sera délivré.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 border rounded-lg p-4 shadow-sm">
+        <h3 class="text-xl font-semibold text-red-600 mb-2">Facilités de Paiement</h3>
+        <p class="text-gray-700">
+          Des paiements en deux tranches sont possibles (50 % à l’inscription et 50 % un mois plus tard).
+        </p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-center text-sm text-gray-500">
+      Pour toute question relative au paiement, veuillez nous contacter via WhatsApp ou email.
+    </p>
+  </div>
+</section>
+
+
+  <!-- FAQ - Inscriptions -->
+<section class="py-12 px-6 bg-gray-100">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-extrabold mb-8 text-blue-800 text-center">❓ FAQ – Foire aux questions</h2>
+    <div class="space-y-4">
+
+      <details class="bg-white rounded-xl shadow-lg p-5 transition hover:shadow-xl">
+        <summary class="cursor-pointer font-semibold text-lg text-gray-800">🧒 Quel âge faut-il avoir pour rejoindre l'académie ?</summary>
+        <p class="mt-2 text-gray-600">L'académie est ouverte aux jeunes talents âgés de <strong>10 à 22 ans</strong>, avec des groupes adaptés par tranche d’âge et niveau.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-lg p-5 transition hover:shadow-xl">
+        <summary class="cursor-pointer font-semibold text-lg text-gray-800">📅 Quand commencent les entraînements ?</summary>
+        <p class="mt-2 text-gray-600">Les entraînements débutent <strong>le premier lundi de septembre</strong>, juste après la rentrée scolaire. Un calendrier complet est remis après validation de l’inscription.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-lg p-5 transition hover:shadow-xl">
+        <summary class="cursor-pointer font-semibold text-lg text-gray-800">💸 Est-il possible de payer en plusieurs fois ?</summary>
+        <p class="mt-2 text-gray-600">Oui, le paiement peut être effectué en <strong>deux ou trois tranches</strong> sur demande. Notre équipe reste à votre disposition pour vous accompagner.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-lg p-5 transition hover:shadow-xl">
+        <summary class="cursor-pointer font-semibold text-lg text-gray-800">📍 Où se déroulent les entraînements ?</summary>
+        <p class="mt-2 text-gray-600">Les sessions se tiennent sur nos installations modernes situées à <strong>[nom exact du lieu]</strong>, équipées pour garantir un encadrement optimal et sécurisé.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-lg p-5 transition hover:shadow-xl">
+        <summary class="cursor-pointer font-semibold text-lg text-gray-800">🏀 Quel est le niveau requis pour s’inscrire ?</summary>
+        <p class="mt-2 text-gray-600">Aucun niveau n’est requis à l’entrée. Nous accueillons aussi bien des débutants passionnés que des joueurs confirmés. Chaque profil est évalué pour intégrer le groupe adapté.</p>
+      </details>
+
+      <details class="bg-white rounded-xl shadow-lg p-5 transition hover:shadow-xl">
+        <summary class="cursor-pointer font-semibold text-lg text-gray-800">🎯 Quels sont les objectifs de l'académie ?</summary>
+        <p class="mt-2 text-gray-600">Former les champions de demain en développant à la fois les compétences techniques, tactiques, physiques et mentales. Nos valeurs : discipline, respect, excellence.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer Pro -->
+<footer class="bg-blue-950 text-white py-10 mt-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 sm:grid-cols-2 gap-8 text-sm">
+    
+    <!-- Logo & Nom -->
+    <div>
+      <h3 class="text-xl font-bold text-red-500 mb-4">🏀 Académie Basket</h3>
+      <p class="text-gray-300">
+        Former les étoiles de demain, sur le terrain comme dans la vie.
+      </p>
+    </div>
+
+    <!-- Liens rapides -->
+    <div>
+      <h4 class="text-white font-semibold mb-3">Navigation</h4>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:text-red-400 transition">🏠 Accueil</a></li>
+        <li><a href="inscriptions.html" class="hover:text-red-400 transition">📝 Inscriptions</a></li>
+        <li><a href="galerie.html" class="hover:text-red-400 transition">📸 Galerie</a></li>
+        <li><a href="contact.html" class="hover:text-red-400 transition">📞 Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Infos de contact -->
+    <div>
+      <h4 class="text-white font-semibold mb-3">Nous contacter</h4>
+      <ul class="space-y-2 text-gray-300">
+        <li>📍 Kinshasa, RDC</li>
+        <li>📧 contact@academiebasket.com</li>
+        <li>📞 +243 970 000 000</li>
+      </ul>
+    </div>
+
+    <!-- Réseaux sociaux -->
+    <div>
+      <h4 class="text-white font-semibold mb-3">Suivez-nous</h4>
+      <div class="flex space-x-4 text-lg">
+        <a href="#" class="hover:text-red-400 transition"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-red-400 transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-400 transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-red-400 transition"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="mt-10 border-t border-gray-700 pt-6 text-gray-400 text-xs text-center">
+    &copy; 2025 Académie Basket. Tous droits réservés. | Design by Lucas
+  </div>
+</footer>
+  <script src="js/inscription.js"></script>
+<script src="js/header.js"></script>
 </body>
 </html>
