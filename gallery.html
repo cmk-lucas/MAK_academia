@@ -55,74 +55,175 @@
       Découvrez les moments forts de l’Académie Basket : photos et vidéos d’entraînements, compétitions, remises de trophées, interviews exclusives des coachs et joueurs, ainsi que les témoignages inspirants des anciens.
     </p>
 
-    <!-- Sections -->
-    <section aria-label="Photos et vidéos d’entraînements, compétitions, remise de trophées" class="mb-16">
-      <h3 class="text-2xl font-semibold mb-6 border-b border-red-600 pb-2 max-w-max mx-auto">
-        Photos et vidéos d’entraînements, compétitions, remise de trophées
-      </h3>
+    <section aria-label="Photos et vidéos d’entraînements, compétitions, remise de trophées" class="mb-20 bg-gray-50 py-12 px-6 rounded-3xl shadow-xl max-w-7xl mx-auto">
+  <h3 class="text-3xl font-extrabold mb-10 text-center text-red-600 tracking-wide drop-shadow-md">
+    Photos et vidéos d’entraînements, compétitions, remise de trophées
+  </h3>
 
-      <!-- Galerie photos -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="img/mac1.jpg" alt="Entraînement intensif sur le terrain" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
-        <img src="img/mac2.jpg" alt="Match intense en compétition" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
-        <img src="img/mac3.jpg" alt="Remise de trophée aux joueurs" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
-        <video controls class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" preload="metadata" aria-label="Vidéo d’un entraînement d’équipe">
-          <source src="img/nba.webm" type="video/webm" />
-          <source src="img/nba.mp4" type="video/mp4" />
-          Votre navigateur ne supporte pas la lecture vidéo.
-        </video>
-        <img src="img/mac5.jpg" alt="Joueurs en plein effort" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
-        <img src="img/mac7.jpg" alt="Foule enthousiaste au match" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
+  <div
+    class="grid gap-8"
+    style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));"
+  >
+    <!-- Card 1 -->
+    <div class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg">
+      <img
+        src="img/mac1.jpg"
+        alt="Entraînement intensif sur le terrain"
+        loading="lazy"
+        class="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-1"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+      >
+        <h4 class="text-white font-semibold text-lg">Entraînement intensif</h4>
       </div>
-    </section>
+    </div>
 
-    <section aria-label="Interviews des coachs et joueurs" class="mb-16 max-w-4xl mx-auto">
-      <h3 class="text-2xl font-semibold mb-6 border-b border-red-600 pb-2 text-center">
-        Interviews des coachs/joueurs
-      </h3>
-
-      <div class="space-y-8 text-gray-300">
-        <article class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-red-600 transition-shadow duration-300">
-          <h4 class="font-bold text-lg mb-2">Coach Pierre Mbemba</h4>
-          <p>
-            « L’esprit d’équipe et la discipline sont les clés du succès. Chaque joueur a un potentiel immense qu’il faut cultiver avec passion. »
-          </p>
-        </article>
-        <article class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-red-600 transition-shadow duration-300">
-          <h4 class="font-bold text-lg mb-2">Joueur Jean Kalala</h4>
-          <p>
-            « Les entraînements sont intenses, mais l’ambiance est familiale. C’est ici que j’ai appris la rigueur et la solidarité. »
-          </p>
-        </article>
-        <article class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-red-600 transition-shadow duration-300">
-          <h4 class="font-bold text-lg mb-2">Coach Aline Mbuyi</h4>
-          <p>
-            « Notre objectif est de former non seulement des athlètes, mais aussi des citoyens responsables. Le basket est un vecteur d’épanouissement. »
-          </p>
-        </article>
+    <!-- Card 2 -->
+    <div class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg">
+      <img
+        src="img/mac2.jpg"
+        alt="Match intense en compétition"
+        loading="lazy"
+        class="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-1"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+      >
+        <h4 class="text-white font-semibold text-lg">Match intense</h4>
       </div>
-    </section>
+    </div>
 
-    <section aria-label="Témoignages des anciens" class="mb-16 max-w-4xl mx-auto">
-      <h3 class="text-2xl font-semibold mb-6 border-b border-red-600 pb-2 text-center">
-        Témoignages des anciens
-      </h3>
-
-      <div class="space-y-8 text-gray-300">
-        <blockquote class="border-l-4 border-red-600 pl-6 italic text-lg">
-          « Grâce à l’Académie, j’ai pu décrocher une bourse universitaire et évoluer dans le basket professionnel. Un tremplin essentiel dans ma vie. »<br>
-          <span class="block mt-2 font-semibold text-red-500">– David K.</span>
-        </blockquote>
-        <blockquote class="border-l-4 border-red-600 pl-6 italic text-lg">
-          « Cette académie m’a appris la rigueur et le travail d’équipe. Je suis fier d’en être un ancien. »<br>
-          <span class="block mt-2 font-semibold text-red-500">– Fatou N.</span>
-        </blockquote>
-        <blockquote class="border-l-4 border-red-600 pl-6 italic text-lg">
-          « Les coachs sont passionnés et toujours disponibles. Ils ont changé ma vie. »<br>
-          <span class="block mt-2 font-semibold text-red-500">– Alain M.</span>
-        </blockquote>
+    <!-- Card 3 -->
+    <div class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg">
+      <img
+        src="img/mac3.jpg"
+        alt="Remise de trophée aux joueurs"
+        loading="lazy"
+        class="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:-rotate-1"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+      >
+        <h4 class="text-white font-semibold text-lg">Remise de trophée</h4>
       </div>
-    </section>
+    </div>
+
+    <!-- Card 4 - Vidéo -->
+    <div
+      class="group relative overflow-hidden rounded-2xl shadow-lg aspect-[16/9]"
+      style="height: 16rem;"
+    >
+      <video
+        controls
+        preload="metadata"
+        class="w-full h-full object-cover rounded-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
+        aria-label="Vidéo d’un entraînement d’équipe"
+      >
+        <source src="img/nba.webm" type="video/webm" />
+        <source src="img/nba.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg">
+      <img
+        src="img/mac5.jpg"
+        alt="Joueurs en plein effort"
+        loading="lazy"
+        class="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-1"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+      >
+        <h4 class="text-white font-semibold text-lg">Effort intense</h4>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg">
+      <img
+        src="img/mac7.jpg"
+        alt="Foule enthousiaste au match"
+        loading="lazy"
+        class="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:-rotate-1"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+      >
+        <h4 class="text-white font-semibold text-lg">Foule en liesse</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Interviews des coachs/joueurs -->
+<section aria-label="Interviews des coachs et joueurs" class="mb-20 max-w-4xl mx-auto px-4 sm:px-0">
+  <h3 class="text-3xl font-extrabold mb-8 border-b-4 border-red-600 pb-3 text-center text-red-600 tracking-wide drop-shadow-md">
+    <ion-icon name="chatbubble-ellipses-outline" class="inline-block mr-2 text-2xl align-middle"></ion-icon>
+    Interviews des coachs/joueurs
+  </h3>
+
+  <div class="space-y-10 text-gray-300">
+    <article class="bg-gradient-to-tr from-blue-900 via-blue-950 to-blue-900 p-7 rounded-3xl shadow-xl hover:shadow-red-600 transition-shadow duration-500 cursor-default">
+      <h4 class="font-semibold text-xl mb-3 flex items-center gap-3 text-white">
+        <ion-icon name="person-circle-outline" class="text-red-500 text-3xl"></ion-icon>
+        Coach Pierre Mbemba
+      </h4>
+      <p class="leading-relaxed text-lg italic tracking-wide">
+        « L’esprit d’équipe et la discipline sont les clés du succès. Chaque joueur a un potentiel immense qu’il faut cultiver avec passion. »
+      </p>
+    </article>
+
+    <article class="bg-gradient-to-tr from-blue-900 via-blue-950 to-blue-900 p-7 rounded-3xl shadow-xl hover:shadow-red-600 transition-shadow duration-500 cursor-default">
+      <h4 class="font-semibold text-xl mb-3 flex items-center gap-3 text-white">
+        <ion-icon name="basketball-outline" class="text-red-500 text-3xl"></ion-icon>
+        Joueur Jean Kalala
+      </h4>
+      <p class="leading-relaxed text-lg italic tracking-wide">
+        « Les entraînements sont intenses, mais l’ambiance est familiale. C’est ici que j’ai appris la rigueur et la solidarité. »
+      </p>
+    </article>
+
+    <article class="bg-gradient-to-tr from-blue-900 via-blue-950 to-blue-900 p-7 rounded-3xl shadow-xl hover:shadow-red-600 transition-shadow duration-500 cursor-default">
+      <h4 class="font-semibold text-xl mb-3 flex items-center gap-3 text-white">
+        <ion-icon name="person-circle-outline" class="text-red-500 text-3xl"></ion-icon>
+        Coach Aline Mbuyi
+      </h4>
+      <p class="leading-relaxed text-lg italic tracking-wide">
+        « Notre objectif est de former non seulement des athlètes, mais aussi des citoyens responsables. Le basket est un vecteur d’épanouissement. »
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- Témoignages des anciens -->
+<section aria-label="Témoignages des anciens" class="mb-20 max-w-4xl mx-auto px-4 sm:px-0">
+  <h3 class="text-3xl font-extrabold mb-8 border-b-4 border-red-600 pb-3 text-center text-red-600 tracking-wide drop-shadow-md">
+    <ion-icon name="heart-circle-outline" class="inline-block mr-2 text-2xl align-middle"></ion-icon>
+    Témoignages des anciens
+  </h3>
+
+  <div class="space-y-10 text-gray-300">
+    <blockquote class="relative bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white p-8 rounded-3xl shadow-lg italic text-lg tracking-wide before:absolute before:-top-6 before:left-8 before:text-7xl before:text-red-400 before:font-extrabold before:opacity-20 before:content-['“']">
+      Grâce à l’Académie, j’ai pu décrocher une bourse universitaire et évoluer dans le basket professionnel. Un tremplin essentiel dans ma vie.
+      <footer class="mt-6 text-right font-semibold text-red-300">– David K.</footer>
+    </blockquote>
+
+    <blockquote class="relative bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white p-8 rounded-3xl shadow-lg italic text-lg tracking-wide before:absolute before:-top-6 before:left-8 before:text-7xl before:text-red-400 before:font-extrabold before:opacity-20 before:content-['“']">
+      Cette académie m’a appris la rigueur et le travail d’équipe. Je suis fier d’en être un ancien.
+      <footer class="mt-6 text-right font-semibold text-red-300">– Fatou N.</footer>
+    </blockquote>
+
+    <blockquote class="relative bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white p-8 rounded-3xl shadow-lg italic text-lg tracking-wide before:absolute before:-top-6 before:left-8 before:text-7xl before:text-red-400 before:font-extrabold before:opacity-20 before:content-['“']">
+      Les coachs sont passionnés et toujours disponibles. Ils ont changé ma vie.
+      <footer class="mt-6 text-right font-semibold text-red-300">– Alain M.</footer>
+    </blockquote>
+  </div>
+</section>
+
   </main>
 
   <!-- Footer Pro -->
