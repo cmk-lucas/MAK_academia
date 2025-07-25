@@ -6,6 +6,8 @@
   <title>Présentation de l'Académie</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -270,54 +272,91 @@
 
   </main>
 
-   <!-- Footer Pro -->
-<footer class="bg-blue-950 text-white py-10 mt-20">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 sm:grid-cols-2 gap-8 text-sm">
+<!-- Footer Pro -->
+<footer class="bg-gradient-to-tr from-blue-900 via-blue-950 to-black text-white py-12 mt-20 shadow-inner">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 sm:grid-cols-2 gap-12 text-sm select-none">
     
-    <!-- Logo & Nom -->
+    <!-- Logo & Description -->
     <div>
-      <h3 class="text-xl font-bold text-red-500 mb-4">🏀 Académie Basket</h3>
-      <p class="text-gray-300">
-        Former les étoiles de demain, sur le terrain comme dans la vie.
+      <h3 class="text-3xl font-extrabold text-red-600 mb-5 tracking-wide flex items-center gap-3">
+        <ion-icon name="basketball-outline" class="text-4xl"></ion-icon>
+        Académie Basket
+      </h3>
+      <p class="text-gray-300 leading-relaxed max-w-[280px]">
+        Former les étoiles de demain, sur le terrain comme dans la vie, avec passion, rigueur et esprit d’équipe.
       </p>
     </div>
 
-    <!-- Liens rapides -->
-    <div>
-      <h4 class="text-white font-semibold mb-3">Navigation</h4>
-      <ul class="space-y-2">
-        <li><a href="index.html" class="hover:text-red-400 transition">🏠 Accueil</a></li>
-        <li><a href="inscriptions.html" class="hover:text-red-400 transition">📝 Inscriptions</a></li>
-        <li><a href="galerie.html" class="hover:text-red-400 transition">📸 Galerie</a></li>
-        <li><a href="contact.html" class="hover:text-red-400 transition">📞 Contact</a></li>
+    <!-- Navigation rapide -->
+    <nav aria-label="Navigation principale">
+      <h4 class="text-white font-semibold mb-4 text-lg tracking-wide border-b border-red-600 pb-2">Navigation</h4>
+      <ul class="space-y-3">
+        <li>
+          <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition duration-300 font-medium" aria-label="Accueil">
+            <ion-icon name="home-outline" class="text-red-500"></ion-icon> Accueil
+          </a>
+        </li>
+        <li>
+          <a href="inscriptions.html" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition duration-300 font-medium" aria-label="Inscriptions">
+            <ion-icon name="create-outline" class="text-red-500"></ion-icon> Inscriptions
+          </a>
+        </li>
+        <li>
+          <a href="galerie.html" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition duration-300 font-medium" aria-label="Galerie">
+            <ion-icon name="images-outline" class="text-red-500"></ion-icon> Galerie
+          </a>
+        </li>
+        <li>
+          <a href="contact.html" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition duration-300 font-medium" aria-label="Contact">
+            <ion-icon name="call-outline" class="text-red-500"></ion-icon> Contact
+          </a>
+        </li>
       </ul>
-    </div>
+    </nav>
 
-    <!-- Infos de contact -->
-    <div>
-      <h4 class="text-white font-semibold mb-3">Nous contacter</h4>
-      <ul class="space-y-2 text-gray-300">
-        <li>📍 Kinshasa, RDC</li>
-        <li>📧 contact@academiebasket.com</li>
-        <li>📞 +243 970 000 000</li>
+    <!-- Informations de contact -->
+    <section aria-label="Informations de contact">
+      <h4 class="text-white font-semibold mb-4 text-lg tracking-wide border-b border-red-600 pb-2">Nous contacter</h4>
+      <ul class="space-y-4 text-gray-400">
+        <li class="flex items-center gap-3">
+          <ion-icon name="location-outline" class="text-red-500 text-xl"></ion-icon>
+          Kinshasa, RDC
+        </li>
+        <li class="flex items-center gap-3">
+          <ion-icon name="mail-outline" class="text-red-500 text-xl"></ion-icon>
+          <a href="mailto:contact@academiebasket.com" class="hover:text-red-500 transition duration-300">contact@academiebasket.com</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <ion-icon name="call-outline" class="text-red-500 text-xl"></ion-icon>
+          <a href="tel:+243970000000" class="hover:text-red-500 transition duration-300">+243 970 000 000</a>
+        </li>
       </ul>
-    </div>
+    </section>
 
     <!-- Réseaux sociaux -->
-    <div>
-      <h4 class="text-white font-semibold mb-3">Suivez-nous</h4>
-      <div class="flex space-x-4 text-lg">
-        <a href="#" class="hover:text-red-400 transition"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="hover:text-red-400 transition"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="hover:text-red-400 transition"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="hover:text-red-400 transition"><i class="fab fa-youtube"></i></a>
+    <section aria-label="Réseaux sociaux">
+      <h4 class="text-white font-semibold mb-4 text-lg tracking-wide border-b border-red-600 pb-2">Suivez-nous</h4>
+      <div class="flex space-x-6 text-2xl">
+        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-red-600 transition duration-300">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-red-600 transition duration-300">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-red-600 transition duration-300">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="#" aria-label="YouTube" class="text-gray-400 hover:text-red-600 transition duration-300">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
       </div>
-    </div>
+    </section>
+
   </div>
 
-  <!-- Copyright -->
-  <div class="mt-10 border-t border-gray-700 pt-6 text-gray-400 text-xs text-center">
-    &copy; 2025 Académie Basket. Tous droits réservés. | Design by Lucas
+  <!-- Bas de page / Copyright -->
+  <div class="mt-14 border-t border-gray-700 pt-6 text-gray-400 text-xs text-center select-text">
+    &copy; 2025 Académie Basket. Tous droits réservés. | Design by <span class="font-semibold text-red-500">Lucas</span>
   </div>
 </footer>
 <script src="js/academy.js"></script>
