@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie - Académie Basket</title>
+  <meta name="description" content="Photos, vidéos, interviews et témoignages de l'Académie Basket" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gradient-to-b from-blue-900 via-blue-950 to-black text-white min-h-screen flex flex-col">
+
+  <!-- Header avec menu responsive -->
+<header class="bg-red-900 text-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold uppercase text-white">Mac Académie</h1>
+
+    <!-- Toggle button (mobile) -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Menu navigation -->
+    <nav id="nav-menu" class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:underline">Accueil</a>
+      <a href="Programme.html" class="hover:underline">programmes</a>
+      <a href="academy.html" class=" text-white font-semibold">visiter</a>
+    </nav>
+  </div>
+
+  <!-- Menu mobile (affiché quand toggle actif) -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <a href="index.html" class="block py-2 hover:underline">Accueil</a>
+    <a href="Programme.html" class="hover:underline">programmes</a>
+    <a href="academy.html" class="block py-2  text-white font-semibold">Visiter</a>
+  </div>
+</header>
+
+  <!-- Main content -->
+  <main class="flex-grow max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-4xl font-extrabold text-red-600 mb-8 text-center tracking-wide">
+      Galerie
+    </h2>
+
+    <!-- Intro text -->
+    <p class="text-center max-w-3xl mx-auto text-gray-300 mb-12 leading-relaxed text-lg">
+      Découvrez les moments forts de l’Académie Basket : photos et vidéos d’entraînements, compétitions, remises de trophées, interviews exclusives des coachs et joueurs, ainsi que les témoignages inspirants des anciens.
+    </p>
+
+    <!-- Sections -->
+    <section aria-label="Photos et vidéos d’entraînements, compétitions, remise de trophées" class="mb-16">
+      <h3 class="text-2xl font-semibold mb-6 border-b border-red-600 pb-2 max-w-max mx-auto">
+        Photos et vidéos d’entraînements, compétitions, remise de trophées
+      </h3>
+
+      <!-- Galerie photos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="img/mac1.jpg" alt="Entraînement intensif sur le terrain" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <img src="img/mac2.jpg" alt="Match intense en compétition" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <img src="img/mac3.jpg" alt="Remise de trophée aux joueurs" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <video controls class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" preload="metadata" aria-label="Vidéo d’un entraînement d’équipe">
+          <source src="img/nba.webm" type="video/webm" />
+          <source src="img/nba.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+        <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=600&q=80" alt="Joueurs en plein effort" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <img src="https://images.unsplash.com/photo-1556909213-5f6e7f18ec4c?auto=format&fit=crop&w=600&q=80" alt="Foule enthousiaste au match" loading="lazy" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" />
+      </div>
+    </section>
+
+    <section aria-label="Interviews des coachs et joueurs" class="mb-16 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-semibold mb-6 border-b border-red-600 pb-2 text-center">
+        Interviews des coachs/joueurs
+      </h3>
+
+      <div class="space-y-8 text-gray-300">
+        <article class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-red-600 transition-shadow duration-300">
+          <h4 class="font-bold text-lg mb-2">Coach Pierre Mbemba</h4>
+          <p>
+            « L’esprit d’équipe et la discipline sont les clés du succès. Chaque joueur a un potentiel immense qu’il faut cultiver avec passion. »
+          </p>
+        </article>
+        <article class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-red-600 transition-shadow duration-300">
+          <h4 class="font-bold text-lg mb-2">Joueur Jean Kalala</h4>
+          <p>
+            « Les entraînements sont intenses, mais l’ambiance est familiale. C’est ici que j’ai appris la rigueur et la solidarité. »
+          </p>
+        </article>
+        <article class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-red-600 transition-shadow duration-300">
+          <h4 class="font-bold text-lg mb-2">Coach Aline Mbuyi</h4>
+          <p>
+            « Notre objectif est de former non seulement des athlètes, mais aussi des citoyens responsables. Le basket est un vecteur d’épanouissement. »
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="Témoignages des anciens" class="mb-16 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-semibold mb-6 border-b border-red-600 pb-2 text-center">
+        Témoignages des anciens
+      </h3>
+
+      <div class="space-y-8 text-gray-300">
+        <blockquote class="border-l-4 border-red-600 pl-6 italic text-lg">
+          « Grâce à l’Académie, j’ai pu décrocher une bourse universitaire et évoluer dans le basket professionnel. Un tremplin essentiel dans ma vie. »<br>
+          <span class="block mt-2 font-semibold text-red-500">– David K.</span>
+        </blockquote>
+        <blockquote class="border-l-4 border-red-600 pl-6 italic text-lg">
+          « Cette académie m’a appris la rigueur et le travail d’équipe. Je suis fier d’en être un ancien. »<br>
+          <span class="block mt-2 font-semibold text-red-500">– Fatou N.</span>
+        </blockquote>
+        <blockquote class="border-l-4 border-red-600 pl-6 italic text-lg">
+          « Les coachs sont passionnés et toujours disponibles. Ils ont changé ma vie. »<br>
+          <span class="block mt-2 font-semibold text-red-500">– Alain M.</span>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Pro -->
+<footer class="bg-gradient-to-tr from-blue-900 via-blue-950 to-black text-white py-12 mt-20 shadow-inner">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 sm:grid-cols-2 gap-12 text-sm select-none">
+    
+    <!-- Logo & Description -->
+    <div>
+      <h3 class="text-3xl font-extrabold text-red-600 mb-5 tracking-wide flex items-center gap-3">
+        <ion-icon name="basketball-outline" class="text-4xl"></ion-icon>
+        Académie Basket
+      </h3>
+      <p class="text-gray-300 leading-relaxed max-w-[280px]">
+        Former les étoiles de demain, sur le terrain comme dans la vie, avec passion, rigueur et esprit d’équipe.
+      </p>
+    </div>
+
+    <!-- Navigation rapide -->
+    <nav aria-label="Navigation principale">
+      <h4 class="text-white font-semibold mb-4 text-lg tracking-wide border-b border-red-600 pb-2">Navigation</h4>
+      <ul class="space-y-3">
+        <li>
+          <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition duration-300 font-medium" aria-label="Accueil">
+            <ion-icon name="home-outline" class="text-red-500"></ion-icon> Accueil
+          </a>
+        </li>
+        <li>
+          <a href="inscriptions.html" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition duration-300 font-medium" aria-label="Inscriptions">
+            <ion-icon name="create-outline" class="text-red-500"></ion-icon> Inscriptions
+          </a>
+        </li>
+        <li>
+          <a href="galerie.html" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition duration-300 font-medium" aria-label="Galerie">
+            <ion-icon name="images-outline" class="text-red-500"></ion-icon> Galerie
+          </a>
+        </li>
+        <li>
+          <a href="contact.html" class="flex items-center gap-2 text-gray-300 hover:text-red-500 transition duration-300 font-medium" aria-label="Contact">
+            <ion-icon name="call-outline" class="text-red-500"></ion-icon> Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Informations de contact -->
+    <section aria-label="Informations de contact">
+      <h4 class="text-white font-semibold mb-4 text-lg tracking-wide border-b border-red-600 pb-2">Nous contacter</h4>
+      <ul class="space-y-4 text-gray-400">
+        <li class="flex items-center gap-3">
+          <ion-icon name="location-outline" class="text-red-500 text-xl"></ion-icon>
+          Kinshasa, RDC
+        </li>
+        <li class="flex items-center gap-3">
+          <ion-icon name="mail-outline" class="text-red-500 text-xl"></ion-icon>
+          <a href="mailto:contact@academiebasket.com" class="hover:text-red-500 transition duration-300">contact@academiebasket.com</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <ion-icon name="call-outline" class="text-red-500 text-xl"></ion-icon>
+          <a href="tel:+243970000000" class="hover:text-red-500 transition duration-300">+243 970 000 000</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Réseaux sociaux -->
+    <section aria-label="Réseaux sociaux">
+      <h4 class="text-white font-semibold mb-4 text-lg tracking-wide border-b border-red-600 pb-2">Suivez-nous</h4>
+      <div class="flex space-x-6 text-2xl">
+        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-red-600 transition duration-300">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-red-600 transition duration-300">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-red-600 transition duration-300">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="#" aria-label="YouTube" class="text-gray-400 hover:text-red-600 transition duration-300">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bas de page / Copyright -->
+  <div class="mt-14 border-t border-gray-700 pt-6 text-gray-400 text-xs text-center select-text">
+    &copy; 2025 Académie Basket. Tous droits réservés. | Design by <span class="font-semibold text-red-500">Lucas</span>
+  </div>
+</footer>
+
+  <script src="js/gestion.js"></script>
+<script src="js/header.js"></script>
+</body>
+
+</html>
