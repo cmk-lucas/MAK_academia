@@ -15,11 +15,19 @@
 <body class="bg-gradient-to-b from-blue-900 via-blue-950 to-black text-white min-h-screen flex flex-col">
 
   <!-- Header avec menu responsive -->
-<header class="bg-red-900 text-white shadow-md">
+<header class="bg-red-900 text-white shadow-lg">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-    <!-- Logo -->
-     <img src="./img/logo_mac.jpg" alt="Logo" class="w-10 h-10 object-contain" />
-    <h1 class="text-2xl font-bold uppercase text-white">Mak Académie</h1>
+    
+    <!-- Logo + Nom -->
+    <div class="flex items-center gap-3">
+      <img src="./img/logo_mac.jpg" 
+           alt="Logo Mak Académie" 
+           class="w-12 h-12 object-contain rounded-full border-2 border-white shadow-md hover:scale-105 transition-transform duration-300" />
+      
+      <h1 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide bg-gradient-to-r from-yellow-300 via-white to-red-300 bg-clip-text text-transparent">
+        Mak Académie
+      </h1>
+    </div>
 
     <!-- Toggle button (mobile) -->
     <button id="menu-toggle" class="md:hidden focus:outline-none">
@@ -29,21 +37,22 @@
       </svg>
     </button>
 
-    <!-- Menu navigation -->
-    <nav id="nav-menu" class="hidden md:flex space-x-6">
-      <a href="index.html" class="hover:underline">Accueil</a>
-      <a href="Programme.html" class="hover:underline">programmes</a>
-      <a href="academy.html" class=" text-white font-semibold">visiter</a>
+    <!-- Menu navigation (desktop) -->
+    <nav id="nav-menu" class="hidden md:flex space-x-6 text-lg">
+      <a href="index.html" class="hover:underline hover:text-yellow-300 transition">Accueil</a>
+      <a href="Programme.html" class="hover:underline hover:text-yellow-300 transition">Programmes</a>
+      <a href="academy.html" class="text-yellow-300 font-semibold">Visiter</a>
     </nav>
   </div>
 
-  <!-- Menu mobile (affiché quand toggle actif) -->
-  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-    <a href="index.html" class="block py-2 hover:underline">Accueil</a>
-    <a href="Programme.html" class="hover:underline">programmes</a>
-    <a href="academy.html" class="block py-2  text-white font-semibold">Visiter</a>
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+    <a href="index.html" class="block py-2 hover:underline hover:text-yellow-300">Accueil</a>
+    <a href="Programme.html" class="block py-2 hover:underline hover:text-yellow-300">Programmes</a>
+    <a href="academy.html" class="block py-2 text-yellow-300 font-semibold">Visiter</a>
   </div>
 </header>
+
 
   <!-- Main content -->
   <main class="flex-grow max-w-7xl mx-auto px-6 py-12">
