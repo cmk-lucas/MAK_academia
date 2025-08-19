@@ -12,7 +12,7 @@ function sendToWhatsApp(e) {
     const adresse = document.getElementById("adresse").value;
     const message = document.getElementById("message").value;
 
-    // Message formaté
+    
     const texte = `
 📝 Nouvelle demande d'inscription :
 
